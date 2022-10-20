@@ -34,39 +34,45 @@
   padding: 20px;
 }
 
-/* blog previews / list */
-.blog-preview {
+/* store previews / list */
+.store-preview {
   padding:10px 16px;
   margin: 20px 0;
   border-bottom: 1px solid #fafafa;
 }
 
-.blog-preview:hover {
+.store-preview:hover {
   box-shadow: 1px 3px 5px rgba(0,0,0,0.3);
 }
 
-.blog-preview h2 {
+.store-preview h2 {
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 8px;
 }
 
-.blog-preview a {
+.store-preview a {
   text-decoration: none;
 }
 
-/* blog details page */
-.blog-details h2 {
+/* store details page */
+.store-details h2 {
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 10px;
 }
 
-.blog-details div {
+.store-details p {
+  font-size: 15px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.store-details div {
   margin: 20px 0;
 }
 
-.blog-details button {
+.store-details button {
   background:#f1356d;
   color: #fff;
   border: 0;

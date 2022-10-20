@@ -2,24 +2,26 @@ import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
 
 const Create = () => {
-    const [title, setTitle] = useState('');
-    const [body, setBody] = useState('');
-    const [author, setAuthor] = useState('yoshi');
+    const [name, setName] = useState('');
+    const [description, setDescription] = useState('');
+    const [author, setAuthor] = useState('Miguel');
+    const [address, setAddress] = useState('');
+    const [website, setWebsite] = useState('');
     const [isPending, setIsPending] = useState(false);
     const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const blog = { title, body, author };
+        const store = { name, description, address, website, author };
 
         setIsPending(true);
 
         fetch('http://localhost:8000/blogs', { 
             method: 'POST',
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(blog)
+            body: JSON.stringify(store)
         }).then(() => {
-            console.log('new blog added')
+            console.log('new store added')
             setIsPending(false);
             history.push('/');
         })
@@ -27,33 +29,49 @@ const Create = () => {
 
     return ( 
         <div className="create">
-            <h2>Ad a New Blog</h2>
+            <h2>Add a New Record Store</h2>
             <form onSubmit={handleSubmit}>
-            <label>Blog title:</label>
+            <label>Store Name:</label>
             <input 
                 type="text"
                 required
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 />
-            <label>Blog body:</label>
+            <label>Store Description:</label>
                 <textarea 
                 required
-                value={body}
-                onChange={(e) => setBody(e.target.value)}
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
                 ></textarea>
-                <label>Blog author:</label>
+                <label>Store Address:</label>
+                <input 
+                type="text"
+                required
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                />
+                 <label>Store Website:</label>
+                <input 
+                type="text"
+                required
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+                />
+                <label>Author:</label>
                 <select 
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                 >
-                    <option value="mario">mario</option>
-                    <option value="yoshi">yoshi</option>
+                    <option value="Miguel">Miguel</option>
+                    <option value="Contributor">Contributor</option>
                 </select>
-                { !isPending && <button>Add Blog</button> }
-                { isPending && <button disabled>Adding blog...</button> }
-                <p>{ title }</p>
-                <p>{ body }</p>
+                { !isPending && <button>Add Store</button> }
+                { isPending && <button disabled>Adding New Store...</button> }
+                <p>{ name }</p>
+                <p>{ description }</p>
+                <p>{ address }</p>
+                <p>{ website }</p>
                 <p>{ author }</p>
             </form>
         </div>
