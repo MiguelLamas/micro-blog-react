@@ -22,7 +22,7 @@ const StoreDetails = () => {
       {store && (
         <article>
           <h2>{store.name}</h2>
-          <p>Written by {store.author}</p>
+          <p>{store.location}</p>
           <div>{store.description}</div>
           <p>{store.address}</p>
           <p>{store.website}</p>

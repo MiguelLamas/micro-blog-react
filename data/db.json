@@ -5,15 +5,15 @@
       "description": "From its early beginnings at Stuart Bakers market stall in Camden, SOTU and its Soul Jazz Records counterpart have grown into an international forerunner and are still situated in Soho iconic corner of Broadwick Street. Eclectically minded, critically acclaimed, and specialising in all things global, its compact top floor holds all new releases, while downstairs plays home to second-hand records and publications. No matter your musical preference, there will be something in this wonderful record emporium that will fit.",
       "address": "7 Broadwick St, Soho, London W1F 0DA, UK",
       "website": "https://soundsoftheuniverse.com/",
-      "author": "Miguel",
+      "location": "Central London",
       "id": 1
     },
     {
-      "name": "My First Blog",
-      "description": "Why do we use it?",
-      "address": " ",
-      "website": " ",
-      "author": "Contributor",
+      "name": "Sounds of the Universe",
+      "description": "From its early beginnings at Stuart Bakers market stall in Camden, SOTU and its Soul Jazz Records counterpart have grown into an international forerunner and are still situated in Soho iconic corner of Broadwick Street. Eclectically minded, critically acclaimed, and specialising in all things global, its compact top floor holds all new releases, while downstairs plays home to second-hand records and publications. No matter your musical preference, there will be something in this wonderful record emporium that will fit.",
+      "address": "7 Broadwick St, Soho, London W1F 0DA, UK",
+      "website": "https://soundsoftheuniverse.com/",
+      "location": "Central London",
       "id": 2
     }
   ]

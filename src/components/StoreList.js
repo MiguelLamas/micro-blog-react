@@ -10,7 +10,7 @@ const StoreList = ({stores, name}) => {
         <div className="store-preview" key={store.id}>
         <Link to={`/stores/${store.id}`}>
         <h2>{ store.name }</h2>
-          <p>Written by { store.author }</p>
+          <p>{ store.location }</p>
         </Link>
         </div>
       ))}
