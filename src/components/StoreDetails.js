@@ -8,7 +8,7 @@ const StoreDetails = () => {
   const history = useHistory();
 
   const handleClick = () => {
-    fetch("http://localhost:8000/blogs/" + store.id, {
+    fetch("http://localhost:8000/stores/" + store.id, {
       method: "DELETE",
     }).then(() => {
       history.push("/");
@@ -25,8 +25,10 @@ const StoreDetails = () => {
           <p>{store.location}</p>
           <div>{store.description}</div>
           <p>{store.address}</p>
-          <p>{store.website}</p>
+          <a href={store.website} target="_blank" rel="noopener noreferrer">{store.website}</a>
+          <div>
           <button onClick={handleClick}>Delete</button>
+          </div>
         </article>
       )}
     </div>

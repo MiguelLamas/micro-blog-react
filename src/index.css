@@ -72,6 +72,15 @@
   margin: 20px 0;
 }
 
+.store-details a {
+  text-decoration: none;
+}
+
+.store-details a:hover {
+  color:#f1356d;
+  text-decoration: underline;
+}
+
 .store-details button {
   background:#f1356d;
   color: #fff;

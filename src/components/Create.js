@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 const Create = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [location, setLocation] = useState("Central London");
+  const [location, setLocation] = useState("");
   const [address, setAddress] = useState("");
   const [website, setWebsite] = useState("");
   const [isPending, setIsPending] = useState(false);
@@ -16,7 +16,7 @@ const Create = () => {
 
     setIsPending(true);
 
-    fetch("http://localhost:8000/blogs", {
+    fetch("http://localhost:8000/stores", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(store),
